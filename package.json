@@ -1,0 +1,8 @@
+{
+  "name": "react-portfolio-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix student-portfolio run dev",
+    "build": "npm --prefix student-portfolio run build"
+  }
+}
