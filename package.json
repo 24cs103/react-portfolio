@@ -1,8 +1,27 @@
 {
+<<<<<<< HEAD
+  "name": "student-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+=======
   "name": "react-portfolio-workspace",
   "private": true,
   "scripts": {
     "dev": "npm --prefix student-portfolio run dev",
     "build": "npm --prefix student-portfolio run build"
+>>>>>>> 869d0f35b29b07526e9ca4b8807bee4400e5d0fa
   }
 }
