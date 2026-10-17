@@ -1,0 +1,711 @@
+/* Main App Layout */
+.portfolio-app {
+  width: 100%;
+  max-width: 980px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Page Content Wrapper */
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =========================================
+   1. Universal Navigation Bar (Navbar)
+   ========================================= */
+.navbar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.brand-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2563eb;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color: #2563eb;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================================
+   2. Header & Banner Cards
+   ========================================= */
+.header-card,
+.page-header-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #2563eb;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  margin-bottom: 6px;
+}
+
+.header-title,
+.page-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 6px 0;
+}
+
+.header-subtitle,
+.page-subtitle {
+  font-size: 0.96rem;
+  color: #475569;
+  margin: 0;
+}
+
+.highlight-name {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* =========================================
+   3. Home Page Interactive Status Card (useState)
+   ========================================= */
+.interactive-status-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.status-indicator-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #1e293b;
+}
+
+.status-bulb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-bulb.available {
+  background-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.status-bulb.busy {
+  background-color: #eab308;
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.endorse-badge {
+  font-size: 0.88rem;
+  color: #475569;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.status-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Button Component Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.btn-endorsed {
+  background-color: #dcfce7;
+  border-color: #86efac;
+  color: #15803d;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: #cbd5e1;
+  color: #2563eb;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+}
+
+/* =========================================
+   4. About & Skills Grid (Home Page)
+   ========================================= */
+.portfolio-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.about-card,
+.skills-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.about-details {
+  margin-top: auto;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detail-item {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+}
+
+.skill-pill {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.skill-pill:hover {
+  background: #dcfce7;
+  transform: translateY(-1px);
+}
+
+.skill-bullet {
+  color: #16a34a;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   5. Projects Page Styles
+   ========================================= */
+.category-filter-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+  color: #2563eb;
+}
+
+.filter-btn.active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+.filter-count {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 10px 0 0 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-category-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 2px 0 0 0;
+}
+
+.project-description {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.project-highlights-box {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #166534;
+}
+
+/* =========================================
+   6. Contact Page Styles
+   ========================================= */
+.contact-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 16px;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.contact-intro {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.contact-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.contact-box strong {
+  display: block;
+  font-size: 0.84rem;
+  color: #0f172a;
+}
+
+.contact-box p {
+  font-size: 0.82rem;
+  color: #475569;
+  margin: 2px 0 0 0;
+}
+
+.contact-icon {
+  font-size: 1.25rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-input,
+.form-textarea {
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-input.input-error,
+.form-textarea.input-error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #ef4444;
+}
+
+.btn-submit {
+  align-self: flex-start;
+  padding: 9px 20px;
+  font-size: 0.9rem;
+}
+
+/* Confirmation Box (useState Confirmation) */
+.confirmation-box {
+  background-color: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.confirmation-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confirmation-header h3 {
+  font-size: 1.15rem;
+  color: #15803d;
+  margin: 0;
+}
+
+.confirmation-icon {
+  font-size: 1.25rem;
+}
+
+.confirmation-text {
+  font-size: 0.9rem;
+  color: #166534;
+  margin: 0;
+}
+
+.confirmation-summary {
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  text-align: left;
+  font-size: 0.84rem;
+  color: #14532d;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.confirmation-summary p {
+  margin: 0;
+}
+
+/* =========================================
+   7. Universal Footer
+   ========================================= */
+.footer-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.footer-contact {
+  font-size: 0.88rem;
+  color: #475569;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.contact-item strong {
+  color: #1e293b;
+}
+
+.contact-separator {
+  color: #cbd5e1;
+}
+
+.footer-copyright {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .portfolio-main,
+  .projects-grid,
+  .contact-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .interactive-status-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-separator {
+    display: none;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
